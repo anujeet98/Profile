@@ -14,9 +14,15 @@ npm install && npm start
 
 ## Deployment
 
-After signing up on Heroku, create a new app, and proceed to download Heroku CLI
+For Serverless deployment via AWS Lambda checkout branch - serverless-deployment
 
 ```bash
-heroku login -i
-heroku builds:create -a <name_of_your_app>
+//Install serverless framework
+npm install -g serverless
+
+//configure serverless framework setup, select Express-API, configure AWS credentials with IAM access key and secret
+serverless 
+
+//update the mongodb connection in .env and deploy
+serverless deploy
 ```
